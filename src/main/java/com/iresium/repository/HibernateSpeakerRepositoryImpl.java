@@ -5,9 +5,10 @@ import com.iresium.model.Speaker;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HibernateSpeakerRepositoryImpl {
+public class HibernateSpeakerRepositoryImpl implements SpeakerRepository {
 
 
+    @Override
     public List<Speaker> findAll() {
         List<Speaker> speakers = new ArrayList<Speaker>();
 
@@ -17,7 +18,8 @@ public class HibernateSpeakerRepositoryImpl {
         speaker.setLastName("Dubey");
 
         speakers.add(speaker);
-        
+
+        return speakers;
     }
 
 
